@@ -13,37 +13,37 @@ import java.util.Scanner;
 public class solution8 {
 
 	static void CountWords(String filename, Map<String,Integer> words)throws FileNotFoundException {
-		
-		 Scanner file = new Scanner(new File("C:\\Users\\PadmajaLanka\\OneDrive - Xpanxion\\Desktop\\file.txt"));
+
+		Scanner file = new Scanner(new File("C:\\Users\\PadmajaLanka\\OneDrive - Xpanxion\\Desktop\\file.txt"));
 		while(file.hasNext()) {
-		
-		String word = file.next();
-		Integer count = words.get(word);
-		if(count != null) {
-		count++;
-		}else {
-			count =1;
-		
-		words.put(word, count);
-		
-	}
-		
+
+			String word = file.next();
+			Integer count = words.get(word);
+			if(count != null) {
+				count++;
+			}else {
+				count =1;
+
+				words.put(word, count);
+
+			}
+
 		}
 		file.close();
 	}
 	public static void main(String[] args) throws FileNotFoundException {
-		
+
 		Map<String,Integer>words = new HashMap<String, Integer>();
 		CountWords("file.txt" , words);
-		 System.out.println(words);
+		System.out.println(words);
 	}
-	
-	
-	
-	
-	}
-	
-	
+
+
+
+
+}
+
+
 	
 	
 	
